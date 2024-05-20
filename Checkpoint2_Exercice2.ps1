@@ -1,3 +1,4 @@
+#Q2.5 remplacement skip 2 par skip 1
 Write-Host "--- Début du script ---"
 
 #Q2.9 Ajout de la fonction LOG au script

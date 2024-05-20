@@ -23,28 +23,28 @@ Je test avec un nouveau ping
 ![Capture d'écran 2024-05-17 102649](https://github.com/Sherub1/Checkpoint-2/assets/160050170/dd37d4ab-8a9b-4799-8dcc-9efe21f7207c)
 
 
-**Q1.2**
+## **Q1.2  Montre et explique le résultat d'un ping du serveur vers le client avec le nom des machines.**
 
 ![image](https://github.com/Sherub1/Checkpoint-2/assets/160050170/8a42cd02-b055-4a44-b379-7581b374fa54)
 - Le résultat de la commande ping CLIENT1 montre qu'il utilise le protocol IPV6 
 
-**Q1.3**
+## **Q1.3 Désactive le protocole IPv6 sur le client.**
 
 Après avoir désactivé le protocole IPV6 sur le client.
 Le ping montre que le serveur utilise l'IPV4 à la place
 ![image](https://github.com/Sherub1/Checkpoint-2/assets/160050170/b6123023-48b3-467e-b938-0eb1cac475c7)
 
-**Q1.4**
+## **Q1.4 Change et montre les configurations réseaux sur le client et/ou sur le serveur pour mettre en place le DHCP.**
 
 Le DHCP est déjà configuré sur le serveur donc je n'ai qu'a l'activé sur le client
 ![image](https://github.com/Sherub1/Checkpoint-2/assets/160050170/783697e5-2bc2-4b16-9381-781158411698)
 
-**Q1.5**
+## **Q1.5 Explique pourquoi le client ne récupère pas la 1ère adresse disponible sur cette plage.**
 
 ![image](https://github.com/Sherub1/Checkpoint-2/assets/160050170/007af316-45a3-4f76-9c34-5283ef3eaefa)
 - Le DHCP a attribué l'adresse IP 172.16.10.20 au client car il y a une exclusion d'adresse sur le serveur allant de 172.16.10.1 à 172.16.10.19
 
-**Q1.6**
+## **Q1.6 Fais une modification sur le DHCP pour que le client ai l'adresse IP 172.16.10.15.**
 
 Je fais une réservation à cette adresse 172.16.10.15
 
@@ -59,11 +59,11 @@ Je fais une réservation à cette adresse 172.16.10.15
   
 ![image](https://github.com/Sherub1/Checkpoint-2/assets/160050170/930b5a1d-f37b-4a01-8467-48b61bc82742)
 
-**Q1.7**
+## **Q1.7 Au vu de tes manipulations, explique l'intérêt de passer ce réseau en IPv6 ?**
 
 - Pour ce réseau je ne vois aucun intéret de le passer en IPV6, a part pour la configuration automatique.
 
-**Q1.8**
+## **Q1.8 Est-ce que dans ce cas le serveur DHCP est obsolète ?**
 
 - Non car on peut utiliser DHCPv6 pour les informations de configuration DNS par exemple.
 - Tout en gardant la gestion de l'IPV4, il faudrait configurer la version IPV6 du DHCP.

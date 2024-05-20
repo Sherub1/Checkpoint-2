@@ -1,6 +1,6 @@
 # **Exercice 1 : Modification IP client serveur**
 
-**Q1.1**
+## **Q1.1 Sans changer les adresses IPv4 des 2 machines, montre et explique le résultat d'un ping IPv4 du serveur vers le client.**
 
 ![Ping serveur to client](https://github.com/Sherub1/Checkpoint-2/assets/160050170/4a6c3631-affc-41b7-8f5d-8a6cf01edbb7)
 

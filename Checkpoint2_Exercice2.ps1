@@ -1,4 +1,3 @@
-#Q2.5 remplacement skip 2 par skip 1
 Write-Host "--- Début du script ---"
 
 #Q2.9 Ajout de la fonction LOG au script
@@ -31,9 +30,8 @@ Function Random-Password {
     $letters = 65..90 + 97..122
 
     $password = Get-Random -Count $length -InputObject ($punc + $digits + $letters) |
-        ForEach-Object { [char]$_ } -join ""
-    
-    return $password
+         ForEach -begin { $aa = $null } -process {$aa += [char]$_} -end {$aa}
+    Return $password.ToString() 
 }
 
 #Q2.16 La fonction enlève les accents présent dans le CSV ,pour exemple le tréma du prénom Anaïs. 
@@ -41,15 +39,13 @@ Function ManageAccentsAndCapitalLetters {
     param ([String]$String)
     
     $StringWithoutAccent = $String -replace '[éèêë]', 'e' -replace '[àâä]', 'a' -replace '[îï]', 'i' -replace '[ôö]', 'o' -replace '[ùûü]', 'u'
-    $StringWithoutAccentAndCapitalLetters = $StringWithoutAccent.ToLower()
-    
-    return $StringWithoutAccentAndCapitalLetters
+    $StringWithoutAccentAndCapitalLetters = $StringWithoutAccent.ToLower()  $StringWithoutAccentAndCapitalLetters
 }
 
 $Path = "C:\Scripts"
 $CsvFile = "$Path\Users.csv"
 $LogFile = "$Path\Log.log"
-
+#Q2.5 remplacement skip 2 par skip 1
 #Q2.7 Modification des éléments pris en compte
 $Users = Import-Csv -Path $CsvFile -Delimiter ";" -Header "prenom","nom","description" -Encoding UTF8 | Select-Object -Skip 1
 
@@ -61,7 +57,7 @@ foreach ($User in $Users) {
     #Q2.12 $Name
     If (-not(Get-LocalUser -Name $Name -ErrorAction SilentlyContinue)) {
         $Pass = Random-Password
-        $Password = ConvertTo-SecureString $Pass -AsPlainText -Force
+        $Password = (ConvertTo-SecureString $Pass -AsPlainText -Force)
         
         # Q2.6 $Description = "$($user.description) - $($User.fonction)"
         $Description = "$($user.description)"

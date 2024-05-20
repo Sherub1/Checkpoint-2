@@ -88,6 +88,8 @@ foreach ($User in $Users)
         $result = "Création utilisateur $name déja existant"
 }
 
-Log
+
 Write-Host "--- Fin du script ---"
+#Q.2.15
+Read-Host "Appuyez sur Entrée pour continuer"
 

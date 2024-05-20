@@ -1,4 +1,4 @@
-**Exercice 2 : Débogage de script PowerShell**
+# **Exercice 2 : Débogage de script PowerShell**
 
 **Q2.1**
 
